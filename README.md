@@ -12,7 +12,7 @@ This plugin was created out of the frustration of not having a way to auto-gener
 First you need to install the package using
 
 ```shell
-$ npm i gitbook-plugin-summary --save
+$ npm i gitbook-plugin-isummary --save
 ```
 
  afterwards, you need to add to your `book.json` the plugin, like this
@@ -21,7 +21,12 @@ $ npm i gitbook-plugin-summary --save
 {
   "plugins": [
     "isummary"
-  ]
+  ],
+  "pluginsConfig": {
+    "isummary": {
+      "ignorePage": ["assets"]
+    }
+  }
 }
 ```
 
