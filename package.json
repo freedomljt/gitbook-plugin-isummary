@@ -1,12 +1,12 @@
 {
-  "name": "gitbook-plugin-summary",
+  "name": "gitbook-plugin-isummary",
   "version": "1.0.0",
   "description": "Gitbook plugin to auto-generate SUMMARY.md",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/julianxhokaxhiu/gitbook-plugin-summary.git"
+    "url": "git+https://github.com/freedomljt/gitbook-plugin-isummary.git"
   },
   "keywords": [
     "gitbook",
@@ -14,15 +14,12 @@
     "gitbook-summary"
   ],
   "author": {
-    "name": "Julian Xhokaxhiu",
-    "email": "",
-    "url": "https://julianxhokaxhiu.com/"
+    "name": "Toobe Loong",
+    "email": "toobe.loong@gmail.com",
+    "url": "https://freedomljt.github.io/gitbook"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/julianxhokaxhiu/gitbook-plugin-summary/issues"
-  },
-  "homepage": "https://github.com/julianxhokaxhiu/gitbook-plugin-summary#readme",
+  "homepage": "https://github.com/freedomljt/gitbook-plugin-isummary#readme",
   "engines": {
     "gitbook": ">=3.2.3"
   },
