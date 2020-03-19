@@ -61,7 +61,7 @@ const renderEntry = config => file =>
 const getConfig = (root, config) => {
   const readmeFilename = config.get('structure.readme')
   const bookTitle = config.get('title')
-  const ignorePath = config.get('pluginsConfig.isummary.ignorePath')
+  const ignorePath = config.get('pluginsConfig.isummary.ignorePath') || []
 
   return {
     root,

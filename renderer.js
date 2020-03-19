@@ -18,12 +18,7 @@ const dirEntry = readmeFilename => ([ dirPath, hasReadme ]) => {
 const getDirTitle = path =>
   Maybe.of(path.split('/'))
     .chain(x => Maybe.fromNullable(x[x.length - 2]))
-    .map(title => formatTitle(title))
     .getOrElse('NO_NAME') // shouldn't happen, right !?
-
-const formatTitle = title =>
-  title.replace(/^[0-9]*-/,'')
-    .replace(/(_|-)/g,' ').replace(/.md$/,"").replace(/\b\w/g, l => l.toUpperCase())
 
 const getFileName = path =>
   Maybe.of(path.split('/'))
@@ -35,7 +30,8 @@ const fileEntry = isReadme => ([ filePath, parsedMarkdown ]) => {
   if (isReadme(filePath)) return
 
   const depth = getFileDepth(filePath)
-  const fileTitle = formatTitle(getFileName(filePath))
+  const fileTitle = getFileTitle(parsedMarkdown)
+    .getOrElse(getFileName(filePath))
 
   return linkEntries(depth, fileTitle, filePath)
 }
