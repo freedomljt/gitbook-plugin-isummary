@@ -24,7 +24,7 @@ $ npm i gitbook-plugin-isummary --save
   ],
   "pluginsConfig": {
     "isummary": {
-      "ignorePage": ["assets"]
+      "ignorePath": ["assets"]
     }
   }
 }
